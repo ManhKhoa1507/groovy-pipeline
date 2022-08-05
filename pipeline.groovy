@@ -1,4 +1,4 @@
-def call(param){
+def call(){
     pipeline {
         environment {
             trackingProxy = false
