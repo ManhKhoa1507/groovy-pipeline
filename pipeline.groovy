@@ -1,4 +1,4 @@
-def call( Map map = [:]){
+@Keyword call( Map map = [:]){
 
     String agentName = map.agentName ?: 'cicd-agent'
     List projectClusterName = map.projectClusterName ?: []
