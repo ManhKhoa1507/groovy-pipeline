@@ -1,11 +1,6 @@
-def call( Map map = [:]) {
+def call(param) {
   pipeline {
         agent any
-
-        environment {
-      trackingProxy = false
-        }
-
         stages {
           stage('DOING ECHO') {
             steps {
