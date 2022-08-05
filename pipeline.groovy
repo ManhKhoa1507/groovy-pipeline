@@ -1,47 +1,20 @@
-mavenJob('Jenkins Tutorial Demo - Library 1 (DSL)') {
-    description 'Build job for Jenkins Tutorial / Library 1'
+def call( Map map = [:]) {
+  pipeline {
+        agent any
 
-    logRotator {
-        numToKeep 5
-    }
-
-    parameters {
-        gitParam('Branch') {
-            description 'The Git branch to checkout'
-            type 'BRANCH'
-            defaultValue 'origin/master'
+        environment {
+      trackingProxy = false
         }
-    }
 
-    scm {
-        git {
-            remote {
-                url 'https://github.com/ManhKhoa1507/groovy-pipeline.git'
+        stages {
+          stage('DOING ECHO') {
+            steps {
+              script {
+                echo 'AHIHI'
+              }
             }
-
-            branch '$Branch'
-
-            // Add extensions 'SparseCheckoutPaths' and 'PathRestriction'
-            def nodeBuilder = NodeBuilder.newInstance()
-            def sparseCheckout = nodeBuilder.createNode('hudson.plugins.git.extensions.impl.SparseCheckoutPaths')
-            sparseCheckout.appendNode('sparseCheckoutPaths')
-                    .appendNode('hudson.plugins.git.extensions.impl.SparseCheckoutPath')
-                    .appendNode('path', 'library1/')
-            def pathRestrictions = nodeBuilder.createNode('hudson.plugins.git.extensions.impl.PathRestriction')
-            pathRestrictions.appendNode('includedRegions', 'library1/.*')
-            extensions {
-                extensions << sparseCheckout
-                extensions << pathRestrictions
-            }
+          }
         }
-    }
-
-    triggers {
-        scm 'H/15 * * * *'
-        snapshotDependencies true
-    }
-
-    rootPOM 'library1/pom.xml'
-    goals 'clean install'
+  }
 }
-
+return this
