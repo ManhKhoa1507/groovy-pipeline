@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage ('Example') {
             steps {
-                sh "ls"
+                sh "ls ./scripts"
                 helloWorld()
             }
         }
