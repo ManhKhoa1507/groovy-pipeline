@@ -1,7 +1,7 @@
 import java.util.logging.Logger
 
 def logInfo(String message) {
-    Logger logger = Logger.getLogger("")
+    Logger logger = Logger.getLogger("").severe(message)
     logger.info(message)
 }
 
