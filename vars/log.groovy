@@ -1,3 +1,3 @@
-def info (message) {
-    echo "INFO: ${message}"
+def call () {
+    sh "echo Hello World"
 }
