@@ -6,6 +6,7 @@ pipeline {
             steps {
                 helloWorld()
                 sh "ls"
+                sh "touch logs"
                 sh "cat logs"
             }
         }
