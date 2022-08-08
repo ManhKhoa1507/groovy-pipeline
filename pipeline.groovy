@@ -1,13 +1,9 @@
-Map modules = [:]
 pipeline {
     agent any
     stages {
-        stage('test') {
+        stage ('ECHO AHIHI') {
             steps {
-                script{
-                    modules.first = load "first.groovy"
-                    modules.first.test1()
-                }
+                sh 'echo "Ahihi"'
             }
         }
     }
