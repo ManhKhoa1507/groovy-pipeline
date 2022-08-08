@@ -2,12 +2,13 @@ import java.util.logging.Logger
 
 void logInfo(String message) {
     Logger logger = Logger.getLogger("")
+    echo message
     logger.info(message)
 }
 
 def call () {
-    def workSpace = env.WORKSPACE
-    def filePath = "${workSpace}/scripts/helloWorld.sh"
+    String workSpace = env.WORKSPACE
+    String filePath = "${workSpace}/scripts/helloWorld.sh"
 
     def helloWorldScripts = readFile(filePath)
     sh "${helloWorldScripts}"
@@ -20,8 +21,7 @@ def readFile(String filePath) {
         logInfo('Reading file')
         String fileContent = file.text
         return fileContent
-    } else {
-        logger.error('File not exists')
+    } else {    
         return null
     }
 }
