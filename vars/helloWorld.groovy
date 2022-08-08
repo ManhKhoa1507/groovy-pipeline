@@ -1,6 +1,8 @@
 def call () {
     def workSpace = env.WORKSPACE
     def filePath = "${workSpace}/scripts/helloWorld.sh"
+    echo workSpace
+
     def helloWorldScripts = readFile(filePath)
     echo helloWorldScripts
 }
