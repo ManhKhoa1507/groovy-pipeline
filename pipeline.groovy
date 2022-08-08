@@ -9,6 +9,13 @@ def call(param) {
               }
             }
           }
+          stage('DOING AHAHA'){
+            steps {
+              script {
+                echo 'AHAHA'
+              }
+            }
+          }
         }
   }
 }
