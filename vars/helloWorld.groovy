@@ -2,7 +2,6 @@ import java.util.logging.Logger
 
 void logInfo(String message) {
     Logger logger = Logger.getLogger("")
-    echo message
     logger.info(message)
 }
 
