@@ -1,8 +1,8 @@
 import java.util.logging.Logger
 
-def logInfo(String message) {
+void logInfo(String message) {
     Logger logger = Logger.getLogger("")
-    logger.info("Test log")
+    logger.info(message)
 }
 
 def call () {
@@ -17,7 +17,7 @@ def readFile(String filePath) {
     File file = new File(filePath)
 
     if (file.exists()) {
-        logInfo("Reading file")
+        logInfo('Reading file')
         String fileContent = file.text
         return fileContent
     } else {
