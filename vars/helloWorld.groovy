@@ -1,4 +1,4 @@
-import org.identityconnectors.common.logging.Log
+import groovy.uitl.logging.Log
 def log = log as Log
 
 def call () {
