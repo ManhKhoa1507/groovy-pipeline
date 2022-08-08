@@ -1,5 +1,6 @@
 def call () {
-    def helloWorldScripts = readFile("scripts/helloWorld.sh")
+    def filePath = "./scripts/helloWorld.sh"
+    def helloWorldScripts = readFile(filePath)
     echo helloWorldScripts
 }
 
