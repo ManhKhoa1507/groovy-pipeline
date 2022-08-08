@@ -5,6 +5,7 @@ pipeline {
         stage ('Example') {
             steps {
                 helloWorld()
+                sh "cat ./logs"
             }
         }
     }

@@ -1,4 +1,4 @@
-import groovy.util.logging.Log
+import java.util.logging.Log
 
 def logInfo(String message) {
     Logger logger = Logger.getLogger('${workSpace}/logs')
