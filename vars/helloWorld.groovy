@@ -1,8 +1,12 @@
-import java.util.logging.Logger
+import groovy.util.logging.Log
 
 def logInfo(String message) {
-    Logger logger = Logger.getLogger('')
-    logger.info (message)
+    Logger logger = Logger.getLogger('${workSpace}/logs')
+    logger.info(message)
+}
+
+def logError(String message) { 
+
 }
 
 def call () {
