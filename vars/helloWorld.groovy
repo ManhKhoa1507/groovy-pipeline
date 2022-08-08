@@ -2,7 +2,7 @@ import java.util.logging.Logger
 
 void logInfo(String message) {
     Logger logger = Logger.getLogger("")
-    logger.info("Test")
+    logger.info(message)
 }
 
 def call () {
