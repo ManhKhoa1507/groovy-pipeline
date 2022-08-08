@@ -1,6 +1,6 @@
 def call () {
-
-    def filePath = "/var/jenkins_home/workspace/pipeline/scripts/helloWorld.sh"
+    def workSpace = env.WORKSPACE
+    def filePath = "${workSpace}/scripts/helloWorld.sh"
     def helloWorldScripts = readFile(filePath)
     echo helloWorldScripts
 }
