@@ -1,14 +1,15 @@
 import java.util.logging.Logger
 
 void logInfo(String message) {
-    Logger logger = Logger.getLogger("")
+    Logger logger = Logger.getLogger('')
     logger.warning(message)
 
-    System.err.println logger.warning(message)
+    echo logger.warning(message)
 }
 
 def call () {
     String workSpace = env.WORKSPACE
+    // String workSpace = './'
     String filePath = "${workSpace}/scripts/helloWorld.sh"
 
     def helloWorldScripts = readFile(filePath)
@@ -22,7 +23,7 @@ def readFile(String filePath) {
         logInfo('Reading file')
         String fileContent = file.text
         return fileContent
-    } else {    
+    } else {
         return null
     }
 }
