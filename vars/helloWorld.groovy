@@ -2,7 +2,7 @@ import java.util.logging.Logger
 
 def logInfo(String message) {
     Logger logger = Logger.getLogger('logs')
-    logger.info(message)
+    logger.log(Level.INFO, message)
 }
 
 def call () {
