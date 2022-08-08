@@ -1,6 +1,6 @@
 import groovy.util.logging.Log
-def log = log as Log
 
+@Log
 def call () {
     def workSpace = env.WORKSPACE
     def filePath = "${workSpace}/scripts/helloWorld.sh"
