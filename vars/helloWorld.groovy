@@ -1,6 +1,6 @@
 import groovy.util.logging.Log
+final Logger logger = LoggerFactory.getLogger("myGroovyLogger");
 
-@Log
 def call () {
     def workSpace = env.WORKSPACE
     def filePath = "${workSpace}/scripts/helloWorld.sh"
@@ -13,14 +13,14 @@ def readFile(String filePath) {
     File file = new File(filePath)
 
     if (file.exists()) {
-        log.info("Reading file ${filePaht}")
+        logger.info("Reading file ${filePaht}")
         String fileContent = file.text
 
 
         return fileContent
 
     } else {
-        log.error('File not exists')
+        logger.error('File not exists')
         return null
     }
 }
