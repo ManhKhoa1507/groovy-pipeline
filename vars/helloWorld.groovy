@@ -17,9 +17,8 @@ def readFile(String filePath) {
     File file = new File(filePath)
 
     if (file.exists()) {
-        logger.info("Reading file ${filePath}")
+        logInfo('Reading ${filePath}')
         String fileContent = file.text
-
         return fileContent
     } else {
         logger.error('File not exists')
