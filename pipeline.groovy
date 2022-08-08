@@ -1,18 +1,19 @@
 def call(param) {
   pipeline {
-        agent any
-        stages {
-          stage('DOING ECHO') {
+    agent any
+    stages {
+        stage('Example') {
             steps {
-          sh "echo 'AHIHI'"
+                echo 'Hello World'
+
+                script {
+                    def browsers = ['chrome', 'firefox']
+                    for (int i = 0; i < browsers.size(); ++i) {
+                        echo "Testing the ${browsers[i]} browser"
+                    }
+                }
             }
-          }
-          stage('DOING AHAHA') {
-            steps {
-          sh "echo 'AHAHA'"
-            }
-          }
         }
-  }
+    }
 }
 return this
