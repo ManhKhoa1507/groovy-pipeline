@@ -4,9 +4,9 @@ pipeline {
     stages {
         stage ('Example') {
             steps {
+                sh "touch logs"
                 helloWorld()
                 sh "ls"
-                sh "touch logs"
                 sh "cat logs"
             }
         }
