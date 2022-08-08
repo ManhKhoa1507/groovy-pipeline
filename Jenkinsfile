@@ -5,7 +5,7 @@ pipeline {
         stage ('Example') {
             steps {
                 sh "pwd"
-                sh "ls ./scripts"
+                sh "ls"
                 helloWorld()
             }
         }
