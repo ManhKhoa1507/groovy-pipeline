@@ -5,7 +5,7 @@ def call(param) {
           stage('DOING ECHO') {
             steps {
               script {
-                echo 'AHIHI'
+                sh "echo 'AHIHI'"
               }
             }
           }
