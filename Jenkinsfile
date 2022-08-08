@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage ('Example') {
             steps {
-                log()
+                sh "echo Hello world"
             }
         }
     }
