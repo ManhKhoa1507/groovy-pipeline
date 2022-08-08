@@ -24,3 +24,5 @@ def readFile(String filePath) {
         return null
     }
 }
+
+call()
