@@ -1,5 +1,9 @@
-import groovy.util.logging.Log
-final Logger logger = LoggerFactory.getLogger("myGroovyLogger");
+import java.util.logging.Logger
+
+def logInfo(String message) {
+    Logger logger = Logger.getLogger('')
+    logger.info (message)
+}
 
 def call () {
     def workSpace = env.WORKSPACE
@@ -13,12 +17,10 @@ def readFile(String filePath) {
     File file = new File(filePath)
 
     if (file.exists()) {
-        logger.info("Reading file ${filePaht}")
+        logger.info("Reading file ${filePath}")
         String fileContent = file.text
 
-
         return fileContent
-
     } else {
         logger.error('File not exists')
         return null
