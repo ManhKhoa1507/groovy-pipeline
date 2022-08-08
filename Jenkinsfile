@@ -4,8 +4,6 @@ pipeline {
     stages {
         stage ('Example') {
             steps {
-                sh "pwd"
-                sh "ls"
                 helloWorld()
             }
         }
