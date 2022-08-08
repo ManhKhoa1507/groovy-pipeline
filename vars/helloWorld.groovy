@@ -3,7 +3,7 @@ def call () {
     def filePath = "${workSpace}/scripts/helloWorld.sh"
 
     def helloWorldScripts = readFile(filePath)
-    sh "helloWorldScripts"
+    sh "${helloWorldScripts}"
 }
 
 def readFile(String filePath) {
