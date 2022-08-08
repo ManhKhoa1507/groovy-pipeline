@@ -1,6 +1,5 @@
 import org.identityconnectors.common.logging.Log
-
-logger = LoggerFactory.getLogger('logger');
+def log = log as Log
 
 def call () {
     def workSpace = env.WORKSPACE
@@ -15,9 +14,10 @@ def readFile(String filePath) {
 
     if (file.exists()) {
         String fileContent = file.text
-        logger.info("Reading file ${filePaht}")
+        log.info("Reading file ${filePaht}")
         return fileContent
+
     } else {
-        logger.error('File not exists')
+        log.error('File not exists')
     }
 }
