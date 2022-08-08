@@ -1,20 +1,14 @@
-def call(param) {
-  pipeline {
+Map modules = [:]
+pipeline {
     agent any
     stages {
-        stage('Example') {
+        stage('test') {
             steps {
-                echo 'Hello World'
-
-                script {
-                    def browsers = ['chrome', 'firefox']
-                    for (int i = 0; i < browsers.size(); ++i) {
-                        echo "Testing the ${browsers[i]} browser"
-                    }
+                script{
+                    modules.first = load "first.groovy"
+                    modules.first.test1()
                 }
             }
         }
     }
-  }
 }
-return this
