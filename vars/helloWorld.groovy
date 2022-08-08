@@ -1,8 +1,8 @@
 import java.util.logging.Logger
 
 def logInfo(String message) {
-    Logger logger = Logger.getLogger("").severe(message)
-    logger.info(message)
+    Logger logger = Logger.getLogger("")
+    logger.info("Test log")
 }
 
 def call () {
