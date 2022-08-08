@@ -5,6 +5,7 @@ def logInfo(String message) {
     logger.info(message)
 }
 
+
 def call () {
     def workSpace = env.WORKSPACE
     def filePath = "${workSpace}/scripts/helloWorld.sh"
