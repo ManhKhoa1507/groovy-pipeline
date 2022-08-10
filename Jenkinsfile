@@ -6,6 +6,7 @@ pipeline {
             steps {
                 helloWorld()
                 sh "ls scripts"
+                sh "cat scripts"
             }
         }
     }
