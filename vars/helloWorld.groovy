@@ -9,7 +9,7 @@ def call () {
 
     def helloWorldScripts = readFile(filePath)
 
-    //writeFile(file: './scripts/ahihi', text: "ahihi")
+    writeFile(file: '${workSpace}/scripts/ahihi.txt', text: "ahihi")
     sh "${helloWorldScripts}"
 }
 
