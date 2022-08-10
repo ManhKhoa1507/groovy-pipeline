@@ -1,31 +1,40 @@
 import java.util.logging.Logger
-
-void logInfo(String message) {
-    Logger logger = Logger.getLogger('')
-    logger.warning(message)
-
-    echo logger.warning(message)
-}
+import java.util.logging.Level
 
 def call () {
-    String workSpace = env.WORKSPACE
-    // String workSpace = './'
+    // Get current workspace
+    // String workSpace = env.WORKSPACE
+    String workSpace = '.'
     String filePath = "${workSpace}/scripts/helloWorld.sh"
 
     def helloWorldScripts = readFile(filePath)
-    sh "${helloWorldScripts}"
+
+    //writeFile(file: './scripts/ahihi', text: "ahihi")
+    // sh "${helloWorldScripts}"
+    println helloWorldScripts
 }
 
 def readFile(String filePath) {
     File file = new File(filePath)
 
     if (file.exists()) {
-        logInfo('Reading file')
+        logInfo('Reading scripts file')
         String fileContent = file.text
         return fileContent
-    } else {
-        return null
     }
+}
+
+void logMessage(String prelix, String message) { 
+    println prelix + " " + message
+}
+
+void logInfo(String message) {
+    logMessage('INFO' , message)
+}
+
+void logError(String message) {
+    logMessage('ERROR', message) 
+    System.exit(1)
 }
 
 call()
