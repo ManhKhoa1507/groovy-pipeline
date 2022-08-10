@@ -34,8 +34,8 @@ void logInfo(String message) {
 }
 
 void logError(String message) {
-    // logMessage('[ERROR]', message) 
-    throw new Exception(message)
+    logMessage('[ERROR]', message) 
+    System.exit(1)
 }
 
 call()
