@@ -35,7 +35,7 @@ void logInfo(String message) {
 
 void logError(String message) {
     // logMessage('[ERROR]', message) 
-    throw new Exception (${message})
+    throw new Exception(message)
 }
 
 call()
