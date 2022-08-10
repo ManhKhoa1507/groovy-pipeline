@@ -29,11 +29,11 @@ void logMessage(String prelix, String message) {
 }
 
 void logInfo(String message) {
-    logMessage('INFO' , message)
+    logMessage('[INFO]' , message)
 }
 
 void logError(String message) {
-    logMessage('ERROR', message) 
+    logMessage('[ERROR]', message) 
     System.exit(1)
 }
 
