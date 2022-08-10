@@ -6,7 +6,7 @@ pipeline {
             steps {
                 helloWorld()
                 sh "ls scripts"
-                sh "cat scripts"
+                sh "cat scripts/ahihi.txt"
             }
         }
     }
