@@ -5,8 +5,7 @@ pipeline {
         stage ('Example') {
             steps {
                 helloWorld()
-                sh "ls scripts"
-                sh "cat scripts/ahihi.txt"
+                sh "ls"
             }
         }
     }
