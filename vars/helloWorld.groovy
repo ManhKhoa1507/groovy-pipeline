@@ -20,6 +20,8 @@ def readFile(String filePath) {
         logInfo('Reading scripts file')
         String fileContent = file.text
         return fileContent
+    } else {
+        logError('File not exists')
     }
 }
 
@@ -33,7 +35,7 @@ void logInfo(String message) {
 
 void logError(String message) {
     logMessage('[ERROR]', message) 
-    System.exit(1)
+    throw new Exception ('message')
 }
 
 call()
