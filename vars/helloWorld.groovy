@@ -3,15 +3,14 @@ import java.util.logging.Level
 
 def call () {
     // Get current workspace
-    // String workSpace = env.WORKSPACE
-    String workSpace = '.'
+    String workSpace = env.WORKSPACE
+    // String workSpace = '.'
     String filePath = "${workSpace}/scripts/helloWorld.sh"
 
     def helloWorldScripts = readFile(filePath)
 
     //writeFile(file: './scripts/ahihi', text: "ahihi")
-    // sh "${helloWorldScripts}"
-    println helloWorldScripts
+    sh "${helloWorldScripts}"
 }
 
 def readFile(String filePath) {
